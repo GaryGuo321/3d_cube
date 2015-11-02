@@ -1,0 +1,93 @@
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 168px;
+    height: 168px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -84px;
+    margin-left: -84px;
+    -webkit-transform: translateZ(-84px);
+}
+
+.box{
+    width: 168px;
+    height: 168px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-perspective-origin: 25% 75%;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.36, 0.7, 0.74);
+    -webkit-animation-iteration-count: infinite;
+}
+
+.one,.two,.three,.four,.five,.six{
+    width: 168px;
+    height: 168px;
+    position: absolute;
+}
+
+.box div div {
+    width: 51px;
+    height: 51px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-right: 1px;
+    margin-top: 1px;
+    float: left;
+    opacity: 0.8;
+}
+
+.one div {
+    background-color: #3388ff;
+}
+
+.two div{
+    background-color: #624180;
+}
+.three div{
+    background-color: #df012a;
+}
+.four div{
+    background-color: #ffe438;
+}
+.five div{
+    background-color: #7fff00;
+}
+.six div{
+    background-color: #ff4500;
+}
+
+.one{
+    -webkit-transform: translateZ(84px);
+}
+.two{
+    -webkit-transform: rotateY(-90deg) translateZ(84px);
+}
+.three{
+    -webkit-transform: rotateY(90deg) translateZ(84px);
+}
+.four{
+    -webkit-transform: rotateX(90deg) translateZ(84px);
+}
+.five{
+    -webkit-transform: rotateX(-90deg) translateZ(84px);
+}
+.six{
+    -webkit-transform: translateZ(-84px) rotateX(180deg);
+}
