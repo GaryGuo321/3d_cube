@@ -21,15 +21,14 @@
     top: 50%;
     margin-top: -84px;
     margin-left: -84px;
-    -webkit-transform: translateZ(-84px);
 }
 
 .box{
     width: 168px;
     height: 168px;
+    /*指定盒子在三维空间*/
     -webkit-transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 50%;
-    -webkit-perspective-origin: 25% 75%;
+    /*动画设置*/
     -webkit-animation-name: rotate;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: cubic-bezier(0.36, 0.36, 0.7, 0.74);
